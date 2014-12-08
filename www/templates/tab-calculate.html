@@ -1,0 +1,37 @@
+<ion-view title="Calculate loan">
+  <ion-content class="padding">
+
+    <div class="card">
+      <div class="item item-text-wrap">
+        <p class="intro">Fusion offers great value loans. Use the slider to see what you could pay.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="range">
+          <input type="range" name="amount-slider" id="amount-slider" max="1000" step="10">
+        </div>
+        <input type="text" name="amount" id="amount" value="£100">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="range">
+          <input type="range" name="time-slider" id="time-slider" min="1" max="5">
+        </div>
+        <input type="text" name="time" id="time" value="2 years">
+      </div>
+    </div>
+
+
+    <div class="card">
+      <div class="item item-text-wrap">
+        <p class="total">You would pay <strong id="length">24</strong> monthly repayments of <strong id="monthly">£5.22</strong>. A total of <strong id="total">£125.36</strong></p>
+        <button class="button button-block button-positive">Apply now</button>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

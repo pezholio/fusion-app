@@ -1,0 +1,418 @@
+<ion-view title="Apply for a loan">
+  <ion-content>
+    <div class="list list-inset" id="details-panel">
+      <div class="padding-bottom padding-left">
+        <h4>Your details</h4>
+      </div>
+
+      <label class="item item-input">
+        <span class="input-label">First Name</span>
+        <input type="text" name="first_name">
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Surname</span>
+        <input type="text" name="surname">
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Member Number</span>
+        <input type="text" name="member_no">
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Address</span>
+        <textarea name="address"></textarea>
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Postcode</span>
+        <input type="text" name="postcode">
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Email Address</span>
+        <input type="email" name="email">
+      </label>
+
+      <div class="padding-top">
+        <button class="button button-block button-positive next" ng-click="showIncome()">Next</button>
+      </div>
+    </div>
+
+    <div class="list list-inset" id="income-panel">
+
+      <div class="padding-bottom padding-left">
+        <h4>Income</h4>
+      </div>
+
+      <div class="list">
+
+        <label class="item item-radio">
+          <input type="radio" name="frequency" value="monthly">
+          <div class="item-content">
+            Monthly
+          </div>
+          <i class="radio-icon ion-checkmark"></i>
+        </label>
+
+        <label class="item item-radio">
+          <input type="radio" name="frequency" value="weekly">
+          <div class="item-content">
+            Weekly
+          </div>
+          <i class="radio-icon ion-checkmark"></i>
+        </label>
+
+      </div>
+
+      <div class="list">
+
+        <label class="item item-input">
+          <span class="input-label">Main Income</span>
+          <input type="tel" class="income" id="main" name="main" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Partner’s Income</span>
+          <input type="tel" class="income" id="partner" name="partner" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Disability Living Allowance</span>
+          <input type="tel" class="income" id="dla" name="dla" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Job Seekers Allowance</span>
+          <input type="tel" class="income" id="jsa" name="jsa" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Child Benefit</span>
+          <input type="tel" class="income" id="child" name="child" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Housing Benefit</span>
+          <input type="tel" class="income" id="housing" name="housing" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Working Tax Credit</span>
+          <input type="tel" class="income" id="working-tax-credit" name="working-tax-credit" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Family Tax Credits</span>
+          <input type="tel" class="income" id="family-tax-credit" name="family-tax-credit" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Other Benefit(s)</span>
+          <input type="tel" class="income" id="other" name="other" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Maintenance</span>
+          <input type="tel" class="income" id="maintencance" name="maintencance" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Personal Pension</span>
+          <input type="tel" class="income" id="personal-pension" name="personal-pension" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">State Pension</span>
+          <input type="tel" class="income" id="state-pension" name="state-pension" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Other Income</span>
+          <input type="tel" class="income" id="other-income" name="other-income" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Total Income</span>
+          <input type="tel" id="total-income" name="total-income">
+        </label>
+
+        <div class="padding-top">
+          <button class="button button-block button-positive next" ng-click="showExpenditure()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="list list-inset" id="expenditure-panel">
+
+      <div class="padding-bottom padding-left">
+        <h4>Expenditure</h4>
+      </div>
+
+      <div class="list">
+
+        <label class="item item-radio">
+          <input type="radio" name="frequency" value="monthly">
+          <div class="item-content">
+            Expenditure
+          </div>
+          <i class="radio-icon ion-checkmark"></i>
+        </label>
+
+        <label class="item item-radio">
+          <input type="radio" name="frequency" value="weekly">
+          <div class="item-content">
+            Weekly
+          </div>
+          <i class="radio-icon ion-checkmark"></i>
+        </label>
+
+      </div>
+
+      <div class="list">
+
+        <label class="item item-input">
+          <span class="input-label">Mortgage / Rent</span>
+          <input type="tel" class="expenditure" id="mortgage-rent" name="mortgage-rent" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Property Service Charge</span>
+          <input type="tel" class="expenditure" id="property-service" name="property-service" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Council Tax</span>
+          <input type="tel" class="expenditure" id="council-tax" name="council-tax" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Home Insurance</span>
+          <input type="tel" class="expenditure" id="home-insurance" name="home-insurance" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Life Insurance</span>
+          <input type="tel" class="expenditure" id="life-insurance" name="life-insurance" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Water Rates</span>
+          <input type="tel" class="expenditure" id="water" name="water" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Electricity</span>
+          <input type="tel" class="expenditure" id="electricity" name="electricity" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Gas / Oil / Coal</span>
+          <input type="tel" class="expenditure" id="gas" name="gas" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Landline Telephone</span>
+          <input type="tel" class="expenditure" id="phone" name="phone" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Mobile Telephone</span>
+          <input type="tel" class="expenditure" id="mobile" name="mobile" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">TV Licence</span>
+          <input type="tel" class="expenditure" id="tv-licence" name="tv-licence" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Cable / Sky TV</span>
+          <input type="tel" class="expenditure" id="sky" name="sky" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Pension Contributions</span>
+          <input type="tel" class="expenditure" id="pension-contribs" name="pension-contribs" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Food Etc</span>
+          <input type="tel" class="expenditure" id="food" name="food" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Nappies</span>
+          <input type="tel" class="expenditure" id="nappies" name="nappies" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Cigarettes</span>
+          <input type="tel" class="expenditure" id="cigarettes" name="cigarettes" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Alcohol</span>
+          <input type="tel" class="expenditure" id="alcohol" name="alcohol" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Clothes</span>
+          <input type="tel" class="expenditure" id="clothes" name="clothes" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Pet Food / Insurance / Vets</span>
+          <input type="tel" class="expenditure" id="pets" name="pets" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Lottery</span>
+          <input type="tel" class="expenditure" id="lottery" name="lottery" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">School Meals</span>
+          <input type="tel" class="expenditure" id="school-meals" name="school-meals" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Pocket Money</span>
+          <input type="tel" class="expenditure" id="pocket-money" name="pocket-money" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Childminding</span>
+          <input type="tel" class="expenditure" id="childminding" name="childminding" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">School Uniform / Shoes</span>
+          <input type="tel" class="expenditure" id="uniform" name="uniform" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Newspapers / Magazines</span>
+          <input type="tel" class="expenditure" id="newspapers" name="newspapers" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Car Loan</span>
+          <input type="tel" class="expenditure" id="car-loan" name="car-loan" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Petrol / Diesel</span>
+          <input type="tel" class="expenditure" id="petrol" name="petrol" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Car Insurance</span>
+          <input type="tel" class="expenditure" id="car-insurance" name="car-insurance" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Car Tax</span>
+          <input type="tel" class="expenditure" id="car-tax" name="car-tax" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Car Maintenance</span>
+          <input type="tel" class="expenditure" id="car-maintenance" name="car-maintenance" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Travel – Bus / Train / Taxi</span>
+          <input type="tel" class="expenditure" id="public-transport" name="public-transport" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Christmas</span>
+          <input type="tel" class="expenditure" id="christmas" name="christmas" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Subscriptions e.g. AA/RAC</span>
+          <input type="tel" class="expenditure" id="subscriptions" name="subscriptions" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Meals Out / Cinema / Bingo</span>
+          <input type="tel" class="expenditure" id="meals-out" name="meals-out" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Credit Cards – Outstanding</span>
+          <input type="tel" class="expenditure" id="credit-cards" name="credit-cards" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Store Cards – Outstanding</span>
+          <input type="tel" class="expenditure" id="store-cards" name="store-cards" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Catalogue Repayments</span>
+          <input type="tel" class="expenditure" id="catalogue" name="catalogue" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Money Lenders</span>
+          <input type="tel" class="expenditure" id="money-lendets" name="money-lendets" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Other Loan / HP Repayments</span>
+          <input type="tel" class="expenditure" id="loans" name="loans" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Brighthouse Etc</span>
+          <input type="tel" class="expenditure" id="brighthouse" name="brighthouse" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Doorstep Lenders</span>
+          <input type="tel" class="expenditure" id="doorstep-lenders" name="doorstep-lenders" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Money Owed to Family / Friends</span>
+          <input type="tel" class="expenditure" id="family-friends" name="family-friends" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">CCJs</span>
+          <input type="tel" class="expenditure" id="ccjs" name="ccjs" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Debt Recovery Companies</span>
+          <input type="tel" class="expenditure" id="debt-recovery" name="debt-recovery" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Maintenance Payments</span>
+          <input type="tel" class="expenditure" id="maintenance" name="maintenance" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Court Costs And Fines</span>
+          <input type="tel" class="expenditure" id="court-costs" name="court-costs" placeholder="£">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Total Expenditure</span>
+          <input type="tel" id="total-expenditure" name="total-expenditure">
+        </label>
+
+        <div class="padding-top">
+          <button class="button button-block button-positive">Send Application</button>
+        </div>
+      </div>
+
+      </div>
+
+  </ion-content>
+</ion-view>
